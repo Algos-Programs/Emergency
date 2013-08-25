@@ -7,12 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"G15Lr835iCCJPtZzSqlMuCqPkKx27zF1e9PkexLu" clientKey:@"LoXF38I380Uxe0UzukA7EN4ZMLW23fJiUPZSVLp8"]; [[UIApplication sharedApplication]registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
+    
+    //Per saperne di più: http://www.iprog.it/blog/objective-c-ios/come-implementare-le-notifiche-push-con-parse/ | iProg
     return YES;
 }
 							
@@ -42,5 +46,22 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    [PFPush storeDeviceToken:deviceToken];   [PFPush subscribeToChannelInBackground:@""];
+
+}
+
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"Failed to register for Push %@",error);
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
+
+    
+    //Per saperne di più: http://www.iprog.it/blog/objective-c-ios/come-implementare-le-notifiche-push-con-parse/ | iProg
 
 @end
