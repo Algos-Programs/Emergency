@@ -20,6 +20,8 @@
 		181E52E117C6745300A52D4E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181E52E017C6745300A52D4E /* AdSupport.framework */; };
 		181E52E317C6745900A52D4E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181E52E217C6745900A52D4E /* Accounts.framework */; };
 		181E52E517C6746000A52D4E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181E52E417C6746000A52D4E /* CoreLocation.framework */; };
+		182A850617E876E1007A7F20 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A850517E876E1007A7F20 /* WebViewController.m */; };
+		182A850917E876EB007A7F20 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A850817E876EB007A7F20 /* NotificationsViewController.m */; };
 		18DFAF2C17C671E700D712E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFAF2B17C671E700D712E7 /* UIKit.framework */; };
 		18DFAF2E17C671E700D712E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFAF2D17C671E700D712E7 /* Foundation.framework */; };
 		18DFAF3017C671E700D712E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFAF2F17C671E700D712E7 /* CoreGraphics.framework */; };
@@ -30,10 +32,8 @@
 		18DFAF4017C671E700D712E7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF3F17C671E700D712E7 /* Default@2x.png */; };
 		18DFAF4217C671E700D712E7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF4117C671E700D712E7 /* Default-568h@2x.png */; };
 		18DFAF4517C671E700D712E7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF4317C671E700D712E7 /* MainStoryboard.storyboard */; };
-		18DFAF4817C671E700D712E7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DFAF4717C671E700D712E7 /* FirstViewController.m */; };
 		18DFAF4A17C671E700D712E7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF4917C671E700D712E7 /* first.png */; };
 		18DFAF4C17C671E700D712E7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF4B17C671E700D712E7 /* first@2x.png */; };
-		18DFAF4F17C671E700D712E7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DFAF4E17C671E700D712E7 /* SecondViewController.m */; };
 		18DFAF5117C671E700D712E7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF5017C671E700D712E7 /* second.png */; };
 		18DFAF5317C671E700D712E7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF5217C671E700D712E7 /* second@2x.png */; };
 		18DFAF5B17C671E700D712E7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFAF5A17C671E700D712E7 /* SenTestingKit.framework */; };
@@ -67,6 +67,10 @@
 		181E52E017C6745300A52D4E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		181E52E217C6745900A52D4E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		181E52E417C6746000A52D4E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		182A850417E876E1007A7F20 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		182A850517E876E1007A7F20 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		182A850717E876EB007A7F20 /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		182A850817E876EB007A7F20 /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
 		18DFAF2817C671E700D712E7 /* emergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFAF2B17C671E700D712E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18DFAF2D17C671E700D712E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,12 +85,8 @@
 		18DFAF3F17C671E700D712E7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		18DFAF4117C671E700D712E7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		18DFAF4417C671E700D712E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		18DFAF4617C671E700D712E7 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		18DFAF4717C671E700D712E7 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		18DFAF4917C671E700D712E7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		18DFAF4B17C671E700D712E7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		18DFAF4D17C671E700D712E7 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		18DFAF4E17C671E700D712E7 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		18DFAF5017C671E700D712E7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		18DFAF5217C671E700D712E7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		18DFAF5917C671E700D712E7 /* emergencyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emergencyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,20 +137,7 @@
 		18DFAF1F17C671E700D712E7 = {
 			isa = PBXGroup;
 			children = (
-				181E52E417C6746000A52D4E /* CoreLocation.framework */,
-				181E52E217C6745900A52D4E /* Accounts.framework */,
-				181E52E017C6745300A52D4E /* AdSupport.framework */,
-				181E52DE17C6744B00A52D4E /* CFNetwork.framework */,
-				181E52DC17C6744500A52D4E /* libsqlite3.dylib */,
-				181E52DA17C6743C00A52D4E /* libz.dylib */,
-				181E52D817C6743400A52D4E /* MobileCoreServices.framework */,
-				181E52D617C6742B00A52D4E /* Security.framework */,
-				181E52D417C6742300A52D4E /* SystemConfiguration.framework */,
-				181E52D217C6740200A52D4E /* QuartzCore.framework */,
-				181E52D017C673F600A52D4E /* MessageUI.framework */,
-				181E52CE17C673EE00A52D4E /* AudioToolbox.framework */,
-				181E52CC17C673D900A52D4E /* Parse.framework */,
-				18DFAF3117C671E700D712E7 /* emergency */,
+				18DFAF3117C671E700D712E7 /* Emergency */,
 				18DFAF6017C671E700D712E7 /* emergencyTests */,
 				18DFAF2A17C671E700D712E7 /* Frameworks */,
 				18DFAF2917C671E700D712E7 /* Products */,
@@ -169,6 +156,19 @@
 		18DFAF2A17C671E700D712E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				181E52DC17C6744500A52D4E /* libsqlite3.dylib */,
+				181E52DA17C6743C00A52D4E /* libz.dylib */,
+				181E52E417C6746000A52D4E /* CoreLocation.framework */,
+				181E52E217C6745900A52D4E /* Accounts.framework */,
+				181E52E017C6745300A52D4E /* AdSupport.framework */,
+				181E52DE17C6744B00A52D4E /* CFNetwork.framework */,
+				181E52D817C6743400A52D4E /* MobileCoreServices.framework */,
+				181E52D617C6742B00A52D4E /* Security.framework */,
+				181E52D417C6742300A52D4E /* SystemConfiguration.framework */,
+				181E52D217C6740200A52D4E /* QuartzCore.framework */,
+				181E52D017C673F600A52D4E /* MessageUI.framework */,
+				181E52CE17C673EE00A52D4E /* AudioToolbox.framework */,
+				181E52CC17C673D900A52D4E /* Parse.framework */,
 				18DFAF2B17C671E700D712E7 /* UIKit.framework */,
 				18DFAF2D17C671E700D712E7 /* Foundation.framework */,
 				18DFAF2F17C671E700D712E7 /* CoreGraphics.framework */,
@@ -177,22 +177,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		18DFAF3117C671E700D712E7 /* emergency */ = {
+		18DFAF3117C671E700D712E7 /* Emergency */ = {
 			isa = PBXGroup;
 			children = (
 				18DFAF3A17C671E700D712E7 /* AppDelegate.h */,
 				18DFAF3B17C671E700D712E7 /* AppDelegate.m */,
 				18DFAF4317C671E700D712E7 /* MainStoryboard.storyboard */,
-				18DFAF4617C671E700D712E7 /* FirstViewController.h */,
-				18DFAF4717C671E700D712E7 /* FirstViewController.m */,
 				18DFAF4917C671E700D712E7 /* first.png */,
 				18DFAF4B17C671E700D712E7 /* first@2x.png */,
-				18DFAF4D17C671E700D712E7 /* SecondViewController.h */,
-				18DFAF4E17C671E700D712E7 /* SecondViewController.m */,
 				18DFAF5017C671E700D712E7 /* second.png */,
 				18DFAF5217C671E700D712E7 /* second@2x.png */,
 				18DFAF3217C671E700D712E7 /* Supporting Files */,
+				182A850417E876E1007A7F20 /* WebViewController.h */,
+				182A850517E876E1007A7F20 /* WebViewController.m */,
+				182A850717E876EB007A7F20 /* NotificationsViewController.h */,
+				182A850817E876EB007A7F20 /* NotificationsViewController.m */,
 			);
+			name = Emergency;
 			path = emergency;
 			sourceTree = "<group>";
 		};
@@ -345,8 +346,8 @@
 			files = (
 				18DFAF3817C671E700D712E7 /* main.m in Sources */,
 				18DFAF3C17C671E700D712E7 /* AppDelegate.m in Sources */,
-				18DFAF4817C671E700D712E7 /* FirstViewController.m in Sources */,
-				18DFAF4F17C671E700D712E7 /* SecondViewController.m in Sources */,
+				182A850617E876E1007A7F20 /* WebViewController.m in Sources */,
+				182A850917E876EB007A7F20 /* NotificationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
