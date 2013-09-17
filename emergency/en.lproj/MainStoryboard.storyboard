@@ -13,19 +13,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="fh9-YI-hd1">
+                                <color key="tintColor" red="0.16275549950000001" green="0.59237203370000002" blue="0.7552224864" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="rLP-by-nem"/>
+                                    <navigationItem title="Emergergency Room" id="rLP-by-nem"/>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYG-H3-Z9K">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="455" id="6OH-js-kfn"/>
+                                </constraints>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oYG-H3-Z9K" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="235-w9-x4m"/>
                             <constraint firstItem="oYG-H3-Z9K" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="453-zs-9tl"/>
-                            <constraint firstItem="oYG-H3-Z9K" firstAttribute="top" secondItem="fh9-YI-hd1" secondAttribute="bottom" type="default" id="YT4-1s-yo2"/>
                             <constraint firstItem="oYG-H3-Z9K" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="ipg-GA-GZT"/>
                             <constraint firstItem="fh9-YI-hd1" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="s45-ev-XMZ"/>
                             <constraint firstItem="fh9-YI-hd1" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="vgo-PZ-h22"/>
@@ -64,6 +67,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="SpS-H2-anv">
+                                <color key="tintColor" red="0.14117945077767025" green="0.51582638970363359" blue="0.6572265625" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Notifiche" id="1p0-vN-Xcp"/>
                                 </items>
@@ -86,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="636" y="175"/>
         </scene>
-        <!--Mail View Controller - Item-->
+        <!--Mail View Controller - Mail-->
         <scene sceneID="m7V-9p-mA0">
             <objects>
                 <viewController id="DgV-Rn-xOB" customClass="MailViewController" sceneMemberID="viewController">
@@ -95,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wvb-Vv-XcJ"/>
+                    <tabBarItem key="tabBarItem" title="Mail" id="wvb-Vv-XcJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNS-dw-qQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,6 +126,20 @@
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MailViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
