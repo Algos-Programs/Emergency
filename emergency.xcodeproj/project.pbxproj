@@ -42,6 +42,8 @@
 		18DFAF5D17C671E700D712E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFAF2D17C671E700D712E7 /* Foundation.framework */; };
 		18DFAF6517C671E700D712E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18DFAF6317C671E700D712E7 /* InfoPlist.strings */; };
 		18DFAF6817C671E700D712E7 /* emergencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DFAF6717C671E700D712E7 /* emergencyTests.m */; };
+		18F4809317ECA1E700516F5F /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18F4809117ECA1E700516F5F /* CoreData.xcdatamodeld */; };
+		18F4809617ECA70000516F5F /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F4809517ECA70000516F5F /* Database.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,9 @@
 		18DFAF6417C671E700D712E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18DFAF6617C671E700D712E7 /* emergencyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emergencyTests.h; sourceTree = "<group>"; };
 		18DFAF6717C671E700D712E7 /* emergencyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = emergencyTests.m; sourceTree = "<group>"; };
+		18F4809217ECA1E700516F5F /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		18F4809417ECA70000516F5F /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		18F4809517ECA70000516F5F /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,17 +191,10 @@
 				18DFAF3A17C671E700D712E7 /* AppDelegate.h */,
 				18DFAF3B17C671E700D712E7 /* AppDelegate.m */,
 				18DFAF4317C671E700D712E7 /* MainStoryboard.storyboard */,
-				18DFAF4917C671E700D712E7 /* first.png */,
-				18DFAF4B17C671E700D712E7 /* first@2x.png */,
-				18DFAF5017C671E700D712E7 /* second.png */,
-				18DFAF5217C671E700D712E7 /* second@2x.png */,
 				18DFAF3217C671E700D712E7 /* Supporting Files */,
-				182A850A17E87B6C007A7F20 /* MailViewController.h */,
-				182A850B17E87B6C007A7F20 /* MailViewController.m */,
-				182A850417E876E1007A7F20 /* WebViewController.h */,
-				182A850517E876E1007A7F20 /* WebViewController.m */,
-				182A850717E876EB007A7F20 /* NotificationsViewController.h */,
-				182A850817E876EB007A7F20 /* NotificationsViewController.m */,
+				18F4809017ECA1BF00516F5F /* Controllers */,
+				18F4809117ECA1E700516F5F /* CoreData.xcdatamodeld */,
+				18F4809717ECA70600516F5F /* Database */,
 			);
 			name = Emergency;
 			path = emergency;
@@ -205,6 +203,10 @@
 		18DFAF3217C671E700D712E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18DFAF4917C671E700D712E7 /* first.png */,
+				18DFAF4B17C671E700D712E7 /* first@2x.png */,
+				18DFAF5017C671E700D712E7 /* second.png */,
+				18DFAF5217C671E700D712E7 /* second@2x.png */,
 				18DFAF3317C671E700D712E7 /* emergency-Info.plist */,
 				18DFAF3417C671E700D712E7 /* InfoPlist.strings */,
 				18DFAF3717C671E700D712E7 /* main.m */,
@@ -233,6 +235,28 @@
 				18DFAF6317C671E700D712E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18F4809017ECA1BF00516F5F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				182A850A17E87B6C007A7F20 /* MailViewController.h */,
+				182A850B17E87B6C007A7F20 /* MailViewController.m */,
+				182A850417E876E1007A7F20 /* WebViewController.h */,
+				182A850517E876E1007A7F20 /* WebViewController.m */,
+				182A850717E876EB007A7F20 /* NotificationsViewController.h */,
+				182A850817E876EB007A7F20 /* NotificationsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		18F4809717ECA70600516F5F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				18F4809417ECA70000516F5F /* Database.h */,
+				18F4809517ECA70000516F5F /* Database.m */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +375,8 @@
 			files = (
 				18DFAF3817C671E700D712E7 /* main.m in Sources */,
 				18DFAF3C17C671E700D712E7 /* AppDelegate.m in Sources */,
+				18F4809617ECA70000516F5F /* Database.m in Sources */,
+				18F4809317ECA1E700516F5F /* CoreData.xcdatamodeld in Sources */,
 				182A850617E876E1007A7F20 /* WebViewController.m in Sources */,
 				182A850917E876EB007A7F20 /* NotificationsViewController.m in Sources */,
 				182A850C17E87B6C007A7F20 /* MailViewController.m in Sources */,
@@ -556,6 +582,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18F4809117ECA1E700516F5F /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18F4809217ECA1E700516F5F /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 18F4809217ECA1E700516F5F /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18DFAF2017C671E700D712E7 /* Project object */;
 }

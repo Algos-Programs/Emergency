@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Database.h"
 
 @implementation AppDelegate
 
@@ -16,7 +17,8 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"G15Lr835iCCJPtZzSqlMuCqPkKx27zF1e9PkexLu" clientKey:@"LoXF38I380Uxe0UzukA7EN4ZMLW23fJiUPZSVLp8"]; [[UIApplication sharedApplication]registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
     
-    //Per saperne di più: http://www.iprog.it/blog/objective-c-ios/come-implementare-le-notifiche-push-con-parse/ | iProg
+
+    
     return YES;
 }
 							
@@ -47,8 +49,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - 
+#pragma mark - Push Notifications
+#pragma mark -
+
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-    [PFPush storeDeviceToken:deviceToken];   [PFPush subscribeToChannelInBackground:@""];
+    
+   [PFPush storeDeviceToken:deviceToken];
+    [PFPush subscribeToChannelInBackground:@""];
+
+    /** -- Per inserire un canale personalizzato
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation addUniqueObject:@"Pippo" forKey:@"channels"];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+    */
 
 }
 
@@ -59,10 +74,15 @@
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [PFPush handlePush:userInfo];
-}
-
-
+    // Create empty photo object
     
-    //Per saperne di più: http://www.iprog.it/blog/objective-c-ios/come-implementare-le-notifiche-push-con-parse/ | iProg
+    NSLog(@"didReceiveRemoteNotification:%@", userInfo);
+    Database *db = [[Database alloc] init];
+    NSString *str = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    [db addNotification:str];
+    NSLog(@"%@", [db allElements]);
+    
+    NSLog(@"didReceiveRemoteNotification:%@", userInfo);
+}
 
 @end

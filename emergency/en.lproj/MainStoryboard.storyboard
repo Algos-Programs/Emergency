@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Web View Controller - Sito Web-->
         <scene sceneID="11">
             <objects>
                 <viewController title="Sito Web" id="2" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RPr-W0-brX"/>
+                        <viewControllerLayoutGuide type="bottom" id="row-iz-3Or"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="fh9-YI-hd1">
-                                <color key="tintColor" red="0.16275549950000001" green="0.59237203370000002" blue="0.7552224864" alpha="1" colorSpace="calibratedRGB"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9J-DS-cHL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Emergergency Room" id="rLP-by-nem"/>
+                                    <navigationItem id="WcT-5u-jnW"/>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYG-H3-Z9K">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lr-XS-STU">
+                                <rect key="frame" x="0.0" y="44" width="320" height="457"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="455" id="6OH-js-kfn"/>
-                                </constraints>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="oYG-H3-Z9K" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="235-w9-x4m"/>
-                            <constraint firstItem="oYG-H3-Z9K" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="453-zs-9tl"/>
-                            <constraint firstItem="oYG-H3-Z9K" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="ipg-GA-GZT"/>
-                            <constraint firstItem="fh9-YI-hd1" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="s45-ev-XMZ"/>
-                            <constraint firstItem="fh9-YI-hd1" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="vgo-PZ-h22"/>
-                            <constraint firstItem="fh9-YI-hd1" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="zE7-Wv-UJR"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sito Web" id="7"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="7"/>
+                    <navigationItem key="navigationItem" id="XMQ-13-Wra"/>
                     <connections>
-                        <outlet property="webView" destination="oYG-H3-Z9K" id="kWl-jj-em9"/>
+                        <outlet property="webView" destination="4lr-XS-STU" id="Egt-fy-bnY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -48,25 +46,30 @@
         <scene sceneID="13">
             <objects>
                 <viewController title="Aggiornamenti" id="3" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L0Y-X0-2mk"/>
+                        <viewControllerLayoutGuide type="bottom" id="8pm-RJ-l7e"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ldm-rq-VWY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ldm-rq-VWY">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="gaj-Os-8l9">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gaj-Os-8l9" id="jyz-eZ-2Aq">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="SpS-H2-anv">
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="SpS-H2-anv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="tintColor" red="0.14117945077767025" green="0.51582638970363359" blue="0.6572265625" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Notifiche" id="1p0-vN-Xcp"/>
@@ -75,13 +78,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="LkJ-W8-aEv"/>
-                            <constraint firstItem="SpS-H2-anv" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="TqM-iH-FpV"/>
-                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="UJL-rX-nWI"/>
-                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="top" secondItem="SpS-H2-anv" secondAttribute="bottom" type="default" id="UPc-jP-Flm"/>
-                            <constraint firstItem="SpS-H2-anv" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="ZjU-Da-0bY"/>
-                            <constraint firstItem="SpS-H2-anv" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="dqT-6z-1Lf"/>
-                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="lXe-hB-HyR"/>
+                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="LkJ-W8-aEv"/>
+                            <constraint firstItem="SpS-H2-anv" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" id="TqM-iH-FpV"/>
+                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" id="UJL-rX-nWI"/>
+                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="top" secondItem="SpS-H2-anv" secondAttribute="bottom" id="UPc-jP-Flm"/>
+                            <constraint firstItem="SpS-H2-anv" firstAttribute="leading" secondItem="17" secondAttribute="leading" id="ZjU-Da-0bY"/>
+                            <constraint firstItem="SpS-H2-anv" firstAttribute="top" secondItem="17" secondAttribute="top" id="dqT-6z-1Lf"/>
+                            <constraint firstItem="Ldm-rq-VWY" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" id="lXe-hB-HyR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" systemItem="history" id="6"/>
@@ -94,8 +97,12 @@
         <scene sceneID="m7V-9p-mA0">
             <objects>
                 <viewController id="DgV-Rn-xOB" customClass="MailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Kb-Cw-Psk"/>
+                        <viewControllerLayoutGuide type="bottom" id="qXE-Fl-Cda"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9xR-vk-7dk">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -116,9 +123,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="DgV-Rn-xOB" kind="relationship" relationship="viewControllers" id="mNV-Da-eXc"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="4x8-bs-fMG"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="Lg6-Z1-fyT"/>
+                        <segue destination="DgV-Rn-xOB" kind="relationship" relationship="viewControllers" id="TFD-bB-dAL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -126,20 +133,6 @@
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MailViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="WebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
