@@ -31,6 +31,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     values = [[NSArray alloc] init];
+
     
 	// Do any additional setup after loading the view.
 }
@@ -67,5 +68,13 @@
     NSString *senderStr = (NSString *)sender;
     int row = [senderStr intValue];
     dnvc.textNotitication = (NSDictionary *)[values objectAtIndex:row];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Committing");
 }
 @end
