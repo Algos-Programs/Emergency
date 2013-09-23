@@ -42,23 +42,7 @@
             </objects>
             <point key="canvasLocation" x="653" y="-602"/>
         </scene>
-        <!--Navigation Controller - Item-->
-        <scene sceneID="cWd-No-Ay5">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="E29-wk-o1Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Zfv-Fc-BQa"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRn-4Q-gvO">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="sJM-rT-Ngy" kind="relationship" relationship="rootViewController" id="Pce-NA-xGs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yov-qi-LDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="653" y="180"/>
-        </scene>
-        <!--Notifications View Controller - Root View Controller-->
+        <!--Notifications View Controller - Notifiche-->
         <scene sceneID="OLH-Hh-E60">
             <objects>
                 <tableViewController id="m7d-Tk-m3e" customClass="NotificationsViewController" sceneMemberID="viewController">
@@ -67,11 +51,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="T5D-Vi-7Zp">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="T5D-Vi-7Zp">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T5D-Vi-7Zp" id="usw-Yx-aKD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -81,16 +65,49 @@
                             <outlet property="delegate" destination="m7d-Tk-m3e" id="lIQ-Sb-i6Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="TLu-7q-cV3"/>
+                    <navigationItem key="navigationItem" title="Notifiche" id="TLu-7q-cV3"/>
+                    <connections>
+                        <segue destination="Nud-Uk-ojM" kind="push" identifier="pushSingleNotification" id="1s2-ip-x2E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzp-VA-2mm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="179"/>
+            <point key="canvasLocation" x="1065" y="158"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Detail Notifiche View Controller - Notifica-->
+        <scene sceneID="Dux-eZ-GAt">
+            <objects>
+                <tableViewController id="Nud-Uk-ojM" customClass="DetailNotificheViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="61" sectionHeaderHeight="10" sectionFooterHeight="10" id="506-BM-IKp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="61" id="1zg-bi-EGG">
+                                <rect key="frame" x="0.0" y="119" width="320" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1zg-bi-EGG" id="trz-qh-BO2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nud-Uk-ojM" id="hnG-nv-wk4"/>
+                            <outlet property="delegate" destination="Nud-Uk-ojM" id="9XN-Nl-Vc5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Notifica" id="eMj-RP-fLe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQs-qj-BRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="158"/>
+        </scene>
+        <!--Navigation Controller - Item-->
         <scene sceneID="ftU-RZ-0g2">
             <objects>
                 <navigationController definesPresentationContext="YES" id="sJM-rT-Ngy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eEA-hu-COG"/>
                     <navigationItem key="navigationItem" id="qLz-Ab-L8V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lUv-bo-rzx">
                         <autoresizingMask key="autoresizingMask"/>
@@ -101,7 +118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RfF-zu-FCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="179"/>
+            <point key="canvasLocation" x="653" y="158"/>
         </scene>
         <!--Mail View Controller - Mail-->
         <scene sceneID="m7V-9p-mA0">
@@ -133,9 +150,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="uRz-bh-uwy"/>
-                        <segue destination="E29-wk-o1Y" kind="relationship" relationship="viewControllers" id="vgb-p5-r4V"/>
-                        <segue destination="DgV-Rn-xOB" kind="relationship" relationship="viewControllers" id="vCK-zp-rtb"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="QWt-p4-iic"/>
+                        <segue destination="sJM-rT-Ngy" kind="relationship" relationship="viewControllers" id="8yc-mv-iRt"/>
+                        <segue destination="DgV-Rn-xOB" kind="relationship" relationship="viewControllers" id="4lH-fM-H9Y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>

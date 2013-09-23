@@ -8,6 +8,7 @@
 
 #import "NotificationsViewController.h"
 #import "Database.h"
+#import "DetailNotificheViewController.h"
 
 @interface NotificationsViewController ()
 
@@ -59,6 +60,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [self performSegueWithIdentifier:@"pushSingleNotification" sender:[NSString stringWithFormat:@"%i", indexPath.row]];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailNotificheViewController *dnvc = segue.destinationViewController;
+    NSString *senderStr = (NSString *)sender;
+    int row = [senderStr intValue];
+    dnvc.textNotitication = (NSDictionary *)[values objectAtIndex:row];
 }
 @end

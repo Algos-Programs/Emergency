@@ -23,6 +23,7 @@
 		182A850617E876E1007A7F20 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A850517E876E1007A7F20 /* WebViewController.m */; };
 		182A850917E876EB007A7F20 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A850817E876EB007A7F20 /* NotificationsViewController.m */; };
 		182A850C17E87B6C007A7F20 /* MailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A850B17E87B6C007A7F20 /* MailViewController.m */; };
+		1841952E17F02E1A00BDA5D5 /* DetailNotificheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841952D17F02E1A00BDA5D5 /* DetailNotificheViewController.m */; };
 		18C731D917EDF42500A62FBF /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C731D817EDF42500A62FBF /* icon_114x114.png */; };
 		18C731DB17EDF44B00A62FBF /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C731DA17EDF44B00A62FBF /* icon_57x57.png */; };
 		18DFAF2C17C671E700D712E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFAF2B17C671E700D712E7 /* UIKit.framework */; };
@@ -78,6 +79,8 @@
 		182A850817E876EB007A7F20 /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
 		182A850A17E87B6C007A7F20 /* MailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailViewController.h; sourceTree = "<group>"; };
 		182A850B17E87B6C007A7F20 /* MailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailViewController.m; sourceTree = "<group>"; };
+		1841952C17F02E1A00BDA5D5 /* DetailNotificheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailNotificheViewController.h; sourceTree = "<group>"; };
+		1841952D17F02E1A00BDA5D5 /* DetailNotificheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailNotificheViewController.m; sourceTree = "<group>"; };
 		18C731D817EDF42500A62FBF /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
 		18C731DA17EDF44B00A62FBF /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
 		18DFAF2817C671E700D712E7 /* emergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +256,8 @@
 				182A850517E876E1007A7F20 /* WebViewController.m */,
 				182A850717E876EB007A7F20 /* NotificationsViewController.h */,
 				182A850817E876EB007A7F20 /* NotificationsViewController.m */,
+				1841952C17F02E1A00BDA5D5 /* DetailNotificheViewController.h */,
+				1841952D17F02E1A00BDA5D5 /* DetailNotificheViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				18F4809617ECA70000516F5F /* Database.m in Sources */,
 				18F4809317ECA1E700516F5F /* CoreData.xcdatamodeld in Sources */,
 				182A850617E876E1007A7F20 /* WebViewController.m in Sources */,
+				1841952E17F02E1A00BDA5D5 /* DetailNotificheViewController.m in Sources */,
 				182A850917E876EB007A7F20 /* NotificationsViewController.m in Sources */,
 				182A850C17E87B6C007A7F20 /* MailViewController.m in Sources */,
 			);
