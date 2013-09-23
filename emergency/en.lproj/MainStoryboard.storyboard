@@ -8,7 +8,7 @@
         <!--Web View Controller - Sito Web-->
         <scene sceneID="11">
             <objects>
-                <viewController title="Sito Web" id="2" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewIdentifier" title="Sito Web" id="2" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RPr-W0-brX"/>
                         <viewControllerLayoutGuide type="bottom" id="row-iz-3Or"/>
