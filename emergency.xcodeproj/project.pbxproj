@@ -151,6 +151,7 @@
 			children = (
 				18DFAF3117C671E700D712E7 /* Emergency */,
 				18DFAF6017C671E700D712E7 /* emergencyTests */,
+				18DFAF3217C671E700D712E7 /* Supporting Files */,
 				18DFAF2A17C671E700D712E7 /* Frameworks */,
 				18DFAF2917C671E700D712E7 /* Products */,
 			);
@@ -195,7 +196,6 @@
 				18DFAF3A17C671E700D712E7 /* AppDelegate.h */,
 				18DFAF3B17C671E700D712E7 /* AppDelegate.m */,
 				18DFAF4317C671E700D712E7 /* MainStoryboard.storyboard */,
-				18DFAF3217C671E700D712E7 /* Supporting Files */,
 				18F4809017ECA1BF00516F5F /* Controllers */,
 				18F4809117ECA1E700516F5F /* CoreData.xcdatamodeld */,
 				18F4809717ECA70600516F5F /* Database */,
@@ -222,6 +222,7 @@
 				18DFAF4117C671E700D712E7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			path = emergency;
 			sourceTree = "<group>";
 		};
 		18DFAF6017C671E700D712E7 /* emergencyTests */ = {

@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NotificationsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface NotificationsViewController : UITableViewController {
     NSArray *values;
 }
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
