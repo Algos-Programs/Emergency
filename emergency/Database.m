@@ -83,13 +83,20 @@ NSString *kTableName = @"Notifications";
     if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statment, nil) == SQLITE_OK) {
         
         while (sqlite3_step(statment) == SQLITE_ROW) {
+            
+            int recordNumber = sqlite3_column_int(statment, 0);
+            
             char *field1 = (char *) sqlite3_column_text(statment, 1);
             NSString *name = [[NSString alloc] initWithUTF8String:field1];
             
             char *field2 = (char *) sqlite3_column_text(statment, 2);
             NSString *data = [[NSString alloc] initWithUTF8String:field2];
             
-            [tempArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:name, @"name", data, @"data", nil]];
+            [tempArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                                  name, @"name",
+                                  data, @"data",
+                                  [NSString stringWithFormat:@"%i", recordNumber], @"id",
+                                  nil]];
         }//end while
         sqlite3_finalize(statment);
     }//end if
@@ -100,9 +107,8 @@ NSString *kTableName = @"Notifications";
 }
 
 
-- (void)removeObjectFromData:(NSData *)data {
-    NSString * query = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = %@", kTableName, data, kTimeStamp];
-    query = [query stringByReplacingOccurrencesOfString:@":" withString:@"/:"];
+- (void)removeObjectFromNumerId:(int)numerRecord {
+    NSString * query = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %d = %@", kTableName, numerRecord, @"id"];
     sqlite3_stmt *compiledStatement;
     char *err;
     if (sqlite3_exec(db, [query UTF8String], nil, &compiledStatement, &err) != SQLITE_OK) {

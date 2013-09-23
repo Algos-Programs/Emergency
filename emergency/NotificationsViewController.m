@@ -81,8 +81,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) { //Eliminazione Cella.
         NSDictionary *dic = [values objectAtIndex:indexPath.row];
-        NSData *data = [NSData dataWithData:(NSData *)[dic objectForKey:@"data"]];
-        [db removeObjectFromData:data];
+        int numberRecord = (int) [[dic objectForKey:@"id"] intValue];
+        [db removeObjectFromNumerId:numberRecord];
         
         [values removeObjectAtIndex:indexPath.row];
         [self.tableView reloadData];
