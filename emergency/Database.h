@@ -15,5 +15,6 @@
 
 - (void)initDB;
 - (void)addNotification:(NSString *)title;
-- (NSArray *)allElements;
+- (NSMutableArray *)allElements;
+- (void)removeObjectFromData:(NSData *)data;
 @end

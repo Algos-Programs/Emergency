@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Database.h"
 
 @interface NotificationsViewController : UITableViewController {
-    NSArray *values;
+    NSMutableArray *values;
+    Database *db;
 }
 @end

@@ -30,25 +30,29 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    values = [[NSArray alloc] init];
+    values = [[NSMutableArray alloc] init];
+    db = [[Database alloc] init];
 
     
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    Database *db = [[Database alloc] init];
     values = [db allElements];
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)didReceiveMemoryWarningc
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return values.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,6 +79,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Committing");
+    if (editingStyle == UITableViewCellEditingStyleDelete) { //Eliminazione Cella.
+        NSDictionary *dic = [values objectAtIndex:indexPath.row];
+        NSData *data = [NSData dataWithData:(NSData *)[dic objectForKey:@"data"]];
+        [db removeObjectFromData:data];
+        
+        [values removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
+    }
 }
 @end

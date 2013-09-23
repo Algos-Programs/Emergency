@@ -73,7 +73,7 @@ NSString *kTableName = @"Notifications";
     }
 }
 
-- (NSArray *)allElements{
+- (NSMutableArray *)allElements{
     
     NSString * qsql = [NSString stringWithFormat:@"SELECT * FROM '%@'", kTableName];
     sqlite3_stmt *statment;
@@ -97,6 +97,20 @@ NSString *kTableName = @"Notifications";
         NSLog(@"***** Error do not possible get all pesi");
     
     return tempArray;
+}
+
+
+- (void)removeObjectFromData:(NSData *)data {
+    NSString * query = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = %@", kTableName, data, kTimeStamp];
+    query = [query stringByReplacingOccurrencesOfString:@":" withString:@"/:"];
+    sqlite3_stmt *compiledStatement;
+    char *err;
+    if (sqlite3_exec(db, [query UTF8String], nil, &compiledStatement, &err) != SQLITE_OK) {
+        
+        sqlite3_close(db);
+        NSLog(@"****** Error Delete Record. '%s'", err);
+    }
+
 }
 
 
