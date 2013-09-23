@@ -103,11 +103,11 @@
             </objects>
             <point key="canvasLocation" x="1540" y="158"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Notifiche-->
         <scene sceneID="ftU-RZ-0g2">
             <objects>
                 <navigationController definesPresentationContext="YES" id="sJM-rT-Ngy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eEA-hu-COG"/>
+                    <tabBarItem key="tabBarItem" title="Notifiche" id="eEA-hu-COG"/>
                     <navigationItem key="navigationItem" id="qLz-Ab-L8V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lUv-bo-rzx">
                         <autoresizingMask key="autoresizingMask"/>
