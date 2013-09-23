@@ -17,4 +17,5 @@
 - (void)addNotification:(NSString *)title;
 - (NSMutableArray *)allElements;
 - (void)removeObjectFromNumerId:(int)numerRecord;
+- (void)removeAll;
 @end

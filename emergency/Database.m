@@ -116,7 +116,30 @@ NSString *kTableName = @"Notifications";
         sqlite3_close(db);
         NSLog(@"****** Error Delete Record. '%s'", err);
     }
+}
 
+/**
+ Svuota la tabella passata da tutti gli elementi.
+ 
+ @param tableName -> Tabella dal quale eliminare i record.
+ @param db -> Database dove applicare l'operazione.
+ 
+ @return db -> Database con l'operazione di eliminazione applicata.
+ */
+- (void)removeAll {
+    
+    NSString *query = [NSString stringWithFormat:@"DELETE FROM \"main\".\"%@\"", kTableName];
+    sqlite3_stmt *compiledStatement;
+    char *err;
+    if (sqlite3_exec(db, [query UTF8String], nil, &compiledStatement, &err) != SQLITE_OK) {
+        
+        sqlite3_close(db);
+        NSLog(@"******Error Empty Ithems from table %@, with error. '%s'", kTableName, err);
+        sqlite3_close(db);
+    }
+    else {
+        NSLog(@"Empty Table %@ successfull", kTableName);
+    }
 }
 
 

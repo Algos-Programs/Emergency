@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Database.h"
 
-@interface NotificationsViewController : UITableViewController {
+@interface NotificationsViewController : UITableViewController <UIAlertViewDelegate> {
     NSMutableArray *values;
     Database *db;
 }
+- (IBAction)pressButtonTrash:(id)sender;
 @end

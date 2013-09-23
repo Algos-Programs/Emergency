@@ -65,7 +65,14 @@
                             <outlet property="delegate" destination="m7d-Tk-m3e" id="lIQ-Sb-i6Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notifiche" id="TLu-7q-cV3"/>
+                    <navigationItem key="navigationItem" title="Notifiche" id="TLu-7q-cV3">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="trash" id="6ah-rG-veo">
+                            <color key="tintColor" red="0.2913478458928952" green="0.72305961277173914" blue="0.5183205467272044" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pressButtonTrash:" destination="m7d-Tk-m3e" id="tlQ-1C-3TF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Nud-Uk-ojM" kind="push" identifier="pushSingleNotification" id="1s2-ip-x2E"/>
                     </connections>

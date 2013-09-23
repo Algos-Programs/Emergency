@@ -88,4 +88,25 @@
         [self.tableView reloadData];
     }
 }
+- (IBAction)pressButtonTrash:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Stai per cancellare tutte le notifiche. \n Continuare ?" delegate:self cancelButtonTitle:@"Annulla" otherButtonTitles:@"Conferma", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            //Button Cancel.
+            break;
+        case 1:
+            //Button Conferma.
+            [db removeAll];
+            [self.tableView reloadData];
+            break;
+        default:
+            //Non si verificherà mai.
+            break;
+    }
+}
+
 @end
