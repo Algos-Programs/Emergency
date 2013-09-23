@@ -32,8 +32,6 @@
     self.tableView.dataSource = self;
     values = [[NSMutableArray alloc] init];
     db = [[Database alloc] init];
-
-    
 	// Do any additional setup after loading the view.
 }
 
@@ -101,12 +99,12 @@
         case 1:
             //Button Conferma.
             [db removeAll];
-            [self.tableView reloadData];
             break;
         default:
             //Non si verificherà mai.
             break;
     }
+    [self viewWillAppear:YES];
 }
 
 @end
