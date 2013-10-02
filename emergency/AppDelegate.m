@@ -16,9 +16,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [Parse setApplicationId:@"G15Lr835iCCJPtZzSqlMuCqPkKx27zF1e9PkexLu" clientKey:@"LoXF38I380Uxe0UzukA7EN4ZMLW23fJiUPZSVLp8"]; [[UIApplication sharedApplication]registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
-    
-
+    [Parse setApplicationId:@"G15Lr835iCCJPtZzSqlMuCqPkKx27zF1e9PkexLu" clientKey:@"LoXF38I380Uxe0UzukA7EN4ZMLW23fJiUPZSVLp8"];
+    [[UIApplication sharedApplication]registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
     
     return YES;
 }
@@ -47,8 +46,7 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
+- (void)applicationDidBecomeActive:(UIApplication *)application {
     // E' uscita da background -> ed è attiva.
     NSLog(@"DidBecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -84,6 +82,7 @@
 }
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+
     [PFPush handlePush:userInfo];
     // Create empty photo object
     
@@ -93,13 +92,23 @@
     [db addNotification:str];
     NSLog(@"%@", [db allElements]);
     
+    
     //-- Faccio partire il programma da capo.
+    /*
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     WebViewController *webViewController = [storyboard instantiateViewControllerWithIdentifier:@"WebViewIdentifier"];
     webViewController = [storyboard instantiateInitialViewController];
     self.window.rootViewController = webViewController;
-
+*/
+    
+    // Clear Notification
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     NSLog(@"didReceiveRemoteNotification:%@", userInfo);
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [[UIApplication sharedApplication] cancelLocalNotification:notification];
 }
 
 @end
