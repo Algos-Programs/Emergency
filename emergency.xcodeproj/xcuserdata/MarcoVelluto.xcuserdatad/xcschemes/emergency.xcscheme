@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18DFAF2717C671E700D712E7"
                BuildableName = "emergency.app"
-               BlueprintName = "emergency"
-               ReferencedContainer = "container:emergency.xcodeproj">
+               BlueprintName = "Emergency"
+               ReferencedContainer = "container:Emergency.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "18DFAF5817C671E700D712E7"
                BuildableName = "emergencyTests.octest"
                BlueprintName = "emergencyTests"
-               ReferencedContainer = "container:emergency.xcodeproj">
+               ReferencedContainer = "container:Emergency.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18DFAF2717C671E700D712E7"
             BuildableName = "emergency.app"
-            BlueprintName = "emergency"
-            ReferencedContainer = "container:emergency.xcodeproj">
+            BlueprintName = "Emergency"
+            ReferencedContainer = "container:Emergency.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18DFAF2717C671E700D712E7"
             BuildableName = "emergency.app"
-            BlueprintName = "emergency"
-            ReferencedContainer = "container:emergency.xcodeproj">
+            BlueprintName = "Emergency"
+            ReferencedContainer = "container:Emergency.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18DFAF2717C671E700D712E7"
             BuildableName = "emergency.app"
-            BlueprintName = "emergency"
-            ReferencedContainer = "container:emergency.xcodeproj">
+            BlueprintName = "Emergency"
+            ReferencedContainer = "container:Emergency.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

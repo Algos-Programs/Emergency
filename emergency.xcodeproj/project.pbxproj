@@ -24,6 +24,10 @@
 		182A850917E876EB007A7F20 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A850817E876EB007A7F20 /* NotificationsViewController.m */; };
 		182A850C17E87B6C007A7F20 /* MailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A850B17E87B6C007A7F20 /* MailViewController.m */; };
 		1841952E17F02E1A00BDA5D5 /* DetailNotificheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841952D17F02E1A00BDA5D5 /* DetailNotificheViewController.m */; };
+		185E806517FC05D000E816A0 /* icon_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 185E806417FC05D000E816A0 /* icon_120x120.png */; };
+		185E806717FC05F400E816A0 /* icon_80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 185E806617FC05F400E816A0 /* icon_80x80.png */; };
+		185E806917FC061F00E816A0 /* icon_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 185E806817FC061F00E816A0 /* icon_29x29.png */; };
+		185E806B17FC065500E816A0 /* icon_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 185E806A17FC065500E816A0 /* icon_58x58.png */; };
 		18C731D917EDF42500A62FBF /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C731D817EDF42500A62FBF /* icon_114x114.png */; };
 		18C731DB17EDF44B00A62FBF /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C731DA17EDF44B00A62FBF /* icon_57x57.png */; };
 		18DFAF2C17C671E700D712E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFAF2B17C671E700D712E7 /* UIKit.framework */; };
@@ -81,6 +85,11 @@
 		182A850B17E87B6C007A7F20 /* MailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailViewController.m; sourceTree = "<group>"; };
 		1841952C17F02E1A00BDA5D5 /* DetailNotificheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailNotificheViewController.h; sourceTree = "<group>"; };
 		1841952D17F02E1A00BDA5D5 /* DetailNotificheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailNotificheViewController.m; sourceTree = "<group>"; };
+		185E806217FC042800E816A0 /* emergency copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "emergency copy-Info.plist"; path = "/Users/MarcoVelluto/Documents/xCode/Progetti/Emergency/emergency copy-Info.plist"; sourceTree = "<absolute>"; };
+		185E806417FC05D000E816A0 /* icon_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120x120.png; sourceTree = "<group>"; };
+		185E806617FC05F400E816A0 /* icon_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80x80.png; sourceTree = "<group>"; };
+		185E806817FC061F00E816A0 /* icon_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_29x29.png; sourceTree = "<group>"; };
+		185E806A17FC065500E816A0 /* icon_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58x58.png; sourceTree = "<group>"; };
 		18C731D817EDF42500A62FBF /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
 		18C731DA17EDF44B00A62FBF /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
 		18DFAF2817C671E700D712E7 /* emergency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emergency.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +158,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185E806317FC050400E816A0 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				185E806A17FC065500E816A0 /* icon_58x58.png */,
+				185E806817FC061F00E816A0 /* icon_29x29.png */,
+				185E806617FC05F400E816A0 /* icon_80x80.png */,
+				185E806417FC05D000E816A0 /* icon_120x120.png */,
+				18C731DA17EDF44B00A62FBF /* icon_57x57.png */,
+				18C731D817EDF42500A62FBF /* icon_114x114.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		18DFAF1F17C671E700D712E7 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +179,7 @@
 				18DFAF3217C671E700D712E7 /* Supporting Files */,
 				18DFAF2A17C671E700D712E7 /* Frameworks */,
 				18DFAF2917C671E700D712E7 /* Products */,
+				185E806217FC042800E816A0 /* emergency copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,8 +233,7 @@
 		18DFAF3217C671E700D712E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18C731DA17EDF44B00A62FBF /* icon_57x57.png */,
-				18C731D817EDF42500A62FBF /* icon_114x114.png */,
+				185E806317FC050400E816A0 /* Icons */,
 				18DFAF4917C671E700D712E7 /* first.png */,
 				18DFAF4B17C671E700D712E7 /* first@2x.png */,
 				18DFAF5017C671E700D712E7 /* second.png */,
@@ -274,9 +296,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18DFAF2717C671E700D712E7 /* emergency */ = {
+		18DFAF2717C671E700D712E7 /* Emergency */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18DFAF6B17C671E700D712E7 /* Build configuration list for PBXNativeTarget "emergency" */;
+			buildConfigurationList = 18DFAF6B17C671E700D712E7 /* Build configuration list for PBXNativeTarget "Emergency" */;
 			buildPhases = (
 				18DFAF2417C671E700D712E7 /* Sources */,
 				18DFAF2517C671E700D712E7 /* Frameworks */,
@@ -286,7 +308,7 @@
 			);
 			dependencies = (
 			);
-			name = emergency;
+			name = Emergency;
 			productName = emergency;
 			productReference = 18DFAF2817C671E700D712E7 /* emergency.app */;
 			productType = "com.apple.product-type.application";
@@ -319,7 +341,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Algos;
 			};
-			buildConfigurationList = 18DFAF2317C671E700D712E7 /* Build configuration list for PBXProject "emergency" */;
+			buildConfigurationList = 18DFAF2317C671E700D712E7 /* Build configuration list for PBXProject "Emergency" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -331,7 +353,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18DFAF2717C671E700D712E7 /* emergency */,
+				18DFAF2717C671E700D712E7 /* Emergency */,
 				18DFAF5817C671E700D712E7 /* emergencyTests */,
 			);
 		};
@@ -345,13 +367,17 @@
 				18DFAF3617C671E700D712E7 /* InfoPlist.strings in Resources */,
 				18DFAF3E17C671E700D712E7 /* Default.png in Resources */,
 				18DFAF4017C671E700D712E7 /* Default@2x.png in Resources */,
+				185E806717FC05F400E816A0 /* icon_80x80.png in Resources */,
 				18DFAF4217C671E700D712E7 /* Default-568h@2x.png in Resources */,
 				18DFAF4517C671E700D712E7 /* MainStoryboard.storyboard in Resources */,
+				185E806517FC05D000E816A0 /* icon_120x120.png in Resources */,
+				185E806917FC061F00E816A0 /* icon_29x29.png in Resources */,
 				18C731DB17EDF44B00A62FBF /* icon_57x57.png in Resources */,
 				18DFAF4A17C671E700D712E7 /* first.png in Resources */,
 				18DFAF4C17C671E700D712E7 /* first@2x.png in Resources */,
 				18C731D917EDF42500A62FBF /* icon_114x114.png in Resources */,
 				18DFAF5117C671E700D712E7 /* second.png in Resources */,
+				185E806B17FC065500E816A0 /* icon_58x58.png in Resources */,
 				18DFAF5317C671E700D712E7 /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +437,7 @@
 /* Begin PBXTargetDependency section */
 		18DFAF5F17C671E700D712E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 18DFAF2717C671E700D712E7 /* emergency */;
+			target = 18DFAF2717C671E700D712E7 /* Emergency */;
 			targetProxy = 18DFAF5E17C671E700D712E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -569,7 +595,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18DFAF2317C671E700D712E7 /* Build configuration list for PBXProject "emergency" */ = {
+		18DFAF2317C671E700D712E7 /* Build configuration list for PBXProject "Emergency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFAF6917C671E700D712E7 /* Debug */,
@@ -578,7 +604,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18DFAF6B17C671E700D712E7 /* Build configuration list for PBXNativeTarget "emergency" */ = {
+		18DFAF6B17C671E700D712E7 /* Build configuration list for PBXNativeTarget "Emergency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFAF6C17C671E700D712E7 /* Debug */,
